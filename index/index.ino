@@ -41,6 +41,7 @@ void loop() {
 void handleRoot() {
   String html = "<html>";
   html += "<head>";
+  html += "<meta name='viewport' content='width=device-width, initial-scale=1.0'>";
   html += "<title>Temperatur- und Feuchtigkeitsüberwachung</title>";  // Titel der Webseite
 
   // CSS im <head>-Bereich
@@ -56,6 +57,19 @@ void handleRoot() {
   html += ".button:hover { background-color: rgba(0,128,0,0.3); }"; 
   html += ".button:active { transform: scale(0.95); }"; 
   html += "h2 {padding: 0 10px 0 10px; margin: 0 0 0 0; }";
+
+  // Media Query für Bildschirmbreiten unter 768 Pixeln
+  html += "@media (max-width: 768px) {";
+  html += ".wrapper { width: 80%; }";
+  html += ".header-wrapper { width: 80%; }";
+  html += "}";
+
+  // Media Query für Bildschirmbreiten unter 480 Pixeln
+  html += "@media (max-width: 480px) {";
+  html += ".wrapper { width: 95%; padding: 10px; }";
+  html += ".button { width: 4rem; height: 4rem; }";
+  html += "}";
+
   html += "</style>";
 
   html += "<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js'></script>";
@@ -189,7 +203,7 @@ void handleRoot() {
   html += "    humidityChart.data.datasets[0].data.push(data.humidity);";
   html += "    humidityChart.update();";
   html += "  });";
-  html += "}, 60000);";
+  html += "}, 60000 * 5);";
   html += "</script>";
 
   
