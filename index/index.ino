@@ -62,7 +62,7 @@ void handleRoot() {
 
   html += "</head>";
 
-  html += "<body style='width: 100vw; overflow: hidden; font-family: sans-serif; '>";
+  html += "<body style='width: 100vw; font-family: sans-serif; '>";
   html += "<div class='wrapper'>";
   html += "<div class='header-wrapper'>";
     html += "<header>";
@@ -81,10 +81,6 @@ void handleRoot() {
     html += "<h3 style='color: red;' id='temp'>Temperatur: </h2>";
     html += "<h3 id='humidity'>Luftfeuchtigkeit: </h2>";
     html += "</div>";
-    html += "<div>";
-    html += "<canvas id='tempChart' width='400' height='200'></canvas>";
-    html += "<canvas id='humidityChart' width='400' height='200'></canvas>";
-    html += "</div>";
   html += "</div>";
 
 
@@ -99,6 +95,12 @@ void handleRoot() {
   html += "<h3>Luftfeuchtigkeits-Sollwert: <span id='targetHumidity'></span></h3>";
   html += "<button class='button' onclick='adjustTargetHumidity(1)'>+</button>";
   html += "<button class='button' onclick='adjustTargetHumidity(-1)'>-</button>";
+
+  html += "<div>";
+  html += "<canvas id='tempChart' width='400' height='200'></canvas>";
+  html += "<canvas id='humidityChart' width='400' height='200'></canvas>";
+  html += "</div>";
+
 
   html += "<script>";
   html += "var targetTemp = 26;";
@@ -187,10 +189,10 @@ void handleRoot() {
   html += "    humidityChart.data.datasets[0].data.push(data.humidity);";
   html += "    humidityChart.update();";
   html += "  });";
-  html += "}, 3000);";
+  html += "}, 60000);";
   html += "</script>";
 
-
+  
 
 
   html += "</div>";
