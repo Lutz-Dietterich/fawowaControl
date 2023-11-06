@@ -1,6 +1,6 @@
 # fawowaControl
 
-# Fahrradwohnwagen-Steuerungssystem mit Mobilem Webinterface
+# Fahrradwohnwagen-Steuerungssystem mit mobilem Webinterface
 
 ## Überblick
 Entwicklung eines Steuerungssystems für einen Fahrradwohnwagen, das über ein mobiles Webinterface zugänglich ist und die Lebensqualität im Inneren durch intelligente Steuerung verbessert.
