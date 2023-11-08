@@ -30,6 +30,6 @@
    - Manufacturer's website (Aosong Electronics) provides detailed documentation.
 
 4. **SHT31-D**:
-   - SHT31-D Datasheet https://www.sensirion.com/en/download-center/humidity-sensors/humidity-temperature-sensor-sht3x-digital-i2c-accurate/
+   - SHT31-D Datasheet https://www.openimpulse.com/blog/products-page/product-category/sht31-temperature-humidity-sensor-module/
    - Sensirion offers datasheets and application notes on their official website.
 
