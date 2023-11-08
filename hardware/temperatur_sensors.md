@@ -18,17 +18,18 @@
 ## Technical Documentation for Sensors
 
 1. **DHT11**:
-   - `[DHT11 Datasheet](https://www.adafruit.com/product/386)`
+   - DHT11 Datasheet https://www.adafruit.com/product/386
    - Additional resources available on Adafruit and SparkFun for hobbyist projects.
 
 2. **DHT22 (also known as AM2302)**:
-   - `[DHT22 Datasheet](https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf)`
+   - DHT22 Datasheet https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf
    - Tutorials and resources can also be found on Adafruit and SparkFun.
 
 3. **DHT20**:
-   - `[DHT20 Datasheet](https://www.aosong.com/en/products/details.asp?id=507)`
+   - DHT20 Datasheet https://www.aosong.com/en/products/details.asp?id=507
    - Manufacturer's website (Aosong Electronics) provides detailed documentation.
 
 4. **SHT31-D**:
-   - `[SHT31-D Datasheet](https://www.sensirion.com/en/download-center/humidity-sensors/humidity-temperature-sensor-sht3x-digital-i2c-accurate/)`
+   - SHT31-D Datasheet https://www.sensirion.com/en/download-center/humidity-sensors/humidity-temperature-sensor-sht3x-digital-i2c-accurate/
    - Sensirion offers datasheets and application notes on their official website.
+
