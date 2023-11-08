@@ -26,7 +26,7 @@
    - Tutorials and resources can also be found on Adafruit and SparkFun.
 
 3. **DHT20**:
-   - DHT20 Datasheet https://www.aosong.com/en/products/details.asp?id=507
+   - DHT20 Datasheet https://www.az-delivery.de/en/blogs/azdelivery-blog-fur-arduino-und-raspberry-pi/dht20-ein-neuer-temperatur-und-luftfeuchtigkeitssensor
    - Manufacturer's website (Aosong Electronics) provides detailed documentation.
 
 4. **SHT31-D**:
