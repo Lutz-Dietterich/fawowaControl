@@ -98,7 +98,6 @@ void handleRoot() {
   html += "</div>";
 
 
-
   // Buttons zum Ändern der Sollwerte
   html += "<h3>Temperatur-Sollwert: <span id='targetTemp'></span></h3>";
   html += "<div class='button-wrapper'>";
@@ -144,7 +143,7 @@ void handleRoot() {
   html += "    $('#humidity').text('Luftfeuchtigkeit: ' + data.humidity + ' %');";
   html += "  });";
   html += "}, 3000);";
-  
+
   html += "</script>";
 
   html += "<script>";
@@ -202,8 +201,10 @@ void handleRoot() {
   html += "    humidityChart.data.labels.push(new Date().toLocaleTimeString());";
   html += "    humidityChart.data.datasets[0].data.push(data.humidity);";
   html += "    humidityChart.update();";
+  // html += "    localStorage.setItem('tempReadings', JSON.stringify(tempChart.data.datasets[0].data));";
+  // html += "    localStorage.setItem('humidityReadings', JSON.stringify(humidityChart.data.datasets[0].data));";
   html += "  });";
-  html += "}, 60000 * 5);";
+  html += "}, 6000);";
   html += "</script>";
 
   
