@@ -1,22 +1,9 @@
 
 # macOS-spezifische Dateien
 .DS_Store
-.AppleDouble
-.LSOverride
 
 # Node-Module und Logs (Node.js/NPM)
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Pymakr- und MicroPython-spezifische Dateien
-/pymakr/.pyc
-/pymakr/__pycache__/
-/pymakr/*.pyo
-/pymakr/*.pyd
-/pymakr/.env
-/pymakr/.session
 
 # Build-Ausgaben
 /dist
@@ -26,10 +13,6 @@ yarn-error.log*
 
 # Persönliche IDE-Einstellungen
 .env
-.idea/
-.vscode/
-*.sublime-project
-*.sublime-workspace
 
 # Temporäre Dateien
 *.log
