@@ -1,11 +1,13 @@
+
 import network
 import socket
 import machine
-import os 
 import config
+from modules import fan_control
 
-# Funktion zum Herstellen der WLAN-Verbindung
+
 def connect_to_wifi(ssid, password):
+
     station = network.WLAN(network.STA_IF)
     station.active(True)
     station.connect(ssid, password)
