@@ -11,7 +11,7 @@ node_modules/
 /out
 /*.tgz
 
-# Persönliche IDE-Einstellungen
+# Ignore Configuration Files
 .env
 config.py
 
