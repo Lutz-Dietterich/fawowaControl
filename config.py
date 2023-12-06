@@ -1,2 +1,2 @@
-SSID = "Ihr_WLAN_Name"
+SSID = "TestSID"
 PASSWORT = "Ihr_Passwort"
