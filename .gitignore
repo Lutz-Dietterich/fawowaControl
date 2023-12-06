@@ -13,6 +13,7 @@ node_modules/
 
 # Persönliche IDE-Einstellungen
 .env
+config.py
 
 # Temporäre Dateien
 *.log
