@@ -1,5 +1,21 @@
 
-
+# macOS-spezifische Dateien
 .DS_Store
 
+# Node-Module und Logs (Node.js/NPM)
+node_modules/
+
+# Build-Ausgaben
+/dist
+/build
+/out
+/*.tgz
+
+# Ignore Configuration Files
 .env
+config.py
+
+# Temporäre Dateien
+*.log
+*.tmp
+*.temp
