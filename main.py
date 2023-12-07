@@ -1,7 +1,7 @@
 
 import network
 import socket
-import machine
+import machine 
 import config
 from modules import fan_control
 
