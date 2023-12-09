@@ -1,0 +1,136 @@
+/* ===============================
+
+basics.css
+
+- grundlegende Einstellungen
+- grundlegende Textgestaltung
+- Elementselektoren
+
+=============================== */
+
+@media screen {
+
+    /**
+      * Grundlegende Einstellung
+      */
+
+    /* border box */
+    html {
+        box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+
+    /* Vermeidung von "collapsing margins" */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    blockquote {
+        margin-top: 0px;
+        margin-bottom: 1em;
+    }
+
+    /* Element visuell verstecken, aber für Screenreader zugänglich lassen */
+    .visually-hidden {
+        position: absolute;
+
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        border: 0;
+        margin: -1px;
+
+        clip-path: inset(0 0);
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+
+    /*+
+      +Umgebene Elemente sollen gefloatete Elemente umschließen
+      */
+
+    .clear-overflow {
+        overflow: hidden;
+    }
+
+    .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .clear-flow-root {
+        display: flow-root;
+    }
+
+    /* 
+     * Element soll unterhalb von gefloateten Elementen bleiben
+     */
+    .clear-both {
+        clear: both;
+    }
+
+
+    /**
+      * Grundlegende Textgestaltung
+      * Elementselektoren
+      */
+
+    body {
+
+        margin: 0;
+
+        font-family: 'source Sans Pro', Arial, sans-serif;
+        font-size: 1rem;
+        letter-spacing: 1px;
+
+    }
+
+    /* Schriftgrößen für Überschriften */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    /* h5 und h6 bei Bedarf nachtragen */
+
+    /* Grundlegende Gestaltung Kontaktdaten und Kontaktformular */
+    address {
+        font-style: normal;
+    }
+
+    label {
+        display: block;
+    }
+
+    form div {
+        margin-top: 1em;
+    }
+
+
+
+}
+
+/* Ende @media */
