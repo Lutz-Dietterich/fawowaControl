@@ -1,56 +1,69 @@
-/* ===============================
+/* =================================
 
-content.css
+layout.css
 
-- Links in main
-- Alle Elemente in main
+- Gestaltung der Layoutbereiche
+- Hauptnavigation in eigenem Stylesheet
+- Elemente im Inhaltsbereich in content.css
 
-================================*/
-
-
+================================== */
 
 @media screen {
-
-    .site-content {
-        line-height: 1.5;
+    body {
+      background-color: #f5f5f3;
+      overflow-x: hidden;
     }
-
-    .site-content a:link {
-        color: #0674b8;
-    }
-
-    .site-content a:visited {
-        color: #36aade;
-    }
-
-    .site-content a:hover .site-content a:focus {
-        color: #f5662e;
-    }
-
-    .site-content a:active {
-
-        color: #d90000;
-    }
-
-
-}
-
-/* Ende @media */
-
-
-
-@media screen and (min-width: 1080px) {
+  
+    /**
+    * Kopfbetreich
+    */
+  
 
     
 
-}
+    /* Abstände Logo und Slogan anpassen */
+  
+    
 
-/* Ende der Media Query */
+
+    /**
+    * Inhaltsbereich
+    */
 
 
-@media screen and (min-width: 800px) {
+
+  
+    /* Zeilenabstand auf das anderthalbfache der Schriftgröße */
+    .main {
+      line-height: 1.5;
+    }
+  
 
     
-}
 
-/* Ende der Media Query */
+    /**
+    * Fußbereich
+    */
+  
+    .footer {
+      background-color: #333;
+      opacity: 0.7;
+      padding: 1%;
+      text-align: right;
+      font-size: 1.5rem;
+    }
+
+}
+  
+  /* Ende @media */
+
+  
+  @media screen and (max-height: 1500px) {
+    
+  }
+  
+  @media screen and (min-width: 768px) {
+   
+  }
+  
+  /* Ende der Media Query */
