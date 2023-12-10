@@ -36,6 +36,23 @@ Main Navigation
       justify-content: flex-end;
   }
 
+  .footer__nav--button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .footer__nav-svg {
+    width: 2rem;
+    height: auto;
+
+    
+
+
 }
 
   /* Ende @media */
