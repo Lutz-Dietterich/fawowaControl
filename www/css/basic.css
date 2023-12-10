@@ -13,27 +13,28 @@ basics.css
     /**
       * Grundlegende Einstellung
       */
-    
-      :root {
-      --color-background: linear-gradient(to bottom, #E7E5D0 0%, #375652 50%, #182F37 100%); /* Hintergrundfarbe */
-      --color-card-background: rgba(14, 38, 45, 0.79); 
-      --color-footer: rgba(0, 0, 0, 0.57); 
-      --color-text-light: #FFFFFF;
-      --color-button: linear-gradient(to bottom, rgba(56,57,62,1) 0%, rgba(24,25,29,1) 100%);
-      --color-active-green: linear-gradient(to bottom, rgba(39,215,28,1) 0%, rgba(171,229,5,1) 100%);
-      --color-off-gray: linear-gradient(to bottom, rgba(132,129,132,1) 0%, rgba(218,218,218,1) 100%);
-      }
-
-    /* border box */
-
+      
+      /* border box */
+      
     html {
         box-sizing: border-box;
     }
-
+    
     *,
     *:before,
     *:after {
         box-sizing: inherit;
+    }
+
+    
+    :root {
+        --color-background: linear-gradient(to bottom, #E7E5D0 0%, #375652 50%, #182F37 100%); /* Hintergrundfarbe */
+        --color-card-background: rgba(14, 38, 45, 0.79); 
+        --color-footer: rgba(0, 0, 0, 0.57); 
+        --color-text-light: #FFFFFF;
+        --color-button: linear-gradient(to bottom, rgba(56,57,62,1) 0%, rgba(24,25,29,1) 100%);
+        --color-active-green: linear-gradient(to bottom, rgba(39,215,28,1) 0%, rgba(171,229,5,1) 100%);
+        --color-off-gray: linear-gradient(to bottom, rgba(132,129,132,1) 0%, rgba(218,218,218,1) 100%);
     }
 
     /* Vermeidung von "collapsing margins" */
@@ -139,7 +140,6 @@ basics.css
     form div {
         margin-top: 1em;
     }
-
 
 
 }
