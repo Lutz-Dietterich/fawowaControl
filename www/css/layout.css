@@ -21,6 +21,10 @@ layout.css
         flex-direction: column;
         min-height: 100vh;
         background: var(--color-background);
+        background-image: url(https://res.cloudinary.com/dnojoo4vt/image/upload/v1702228821/jay-mantri-TFyi0QOx08c-unsplash_1_mmgnu6.jpg);
+        background-position: bottom 15% center;
+        /* background-size: cover; */
+
     }
 
     .main {
