@@ -9,8 +9,20 @@ Main Navigation
 
 @media screen {
 
-  
+  .footer__navbar {
+    border: black solid;
+    width: 200px;
+    background-color: aqua;
+    z-index: 100;
+  }
 
+  .footer__nav-list {
+    border: black solid;
+    width: 200px;
+    background-color: aqua;
+    z-index: 100;
+
+  }
 
 }
 
