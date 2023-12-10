@@ -10,18 +10,30 @@ Main Navigation
 @media screen {
 
   .footer__navbar {
-    border: black solid;
-    width: 200px;
-    background-color: aqua;
-    z-index: 100;
+    width: 90%;
   }
 
   .footer__nav-list {
-    border: black solid;
-    width: 200px;
-    background-color: aqua;
-    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
 
+  .footer__nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .footer__nav-item:first-child {
+    justify-content: flex-start;
+}
+
+  .footer__nav-item:last-child {
+      justify-content: flex-end;
   }
 
 }
