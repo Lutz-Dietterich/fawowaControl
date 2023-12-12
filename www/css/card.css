@@ -1,9 +1,10 @@
+
 /* ===============================
 
-content.css
+card.css
 
-- Links in main
-- Alle Elemente in main
+- gestaltung der einzelnen Karten
+
 
 ================================*/
 
@@ -11,16 +12,19 @@ content.css
 
 @media screen {
 
-
- .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  margin-bottom: 20%;
+    .card {
+        display: flex;
     
-}
+        background-color: var(--color-card-background);
+        width: 80vw;
+        height: 70vh;
+    }
 
+    .card__home {
+        background-color: none;
+    }
+ 
+    
 }
 
 /* Ende @media */

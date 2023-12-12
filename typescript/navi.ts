@@ -1,18 +1,18 @@
     
+    let settings: boolean = false;
     const settingsOn = document.querySelector('[data-js="icon__settings--off"]') as SVGSVGElement | null;
     const settingsOff = document.querySelector('[data-js="icon__settings--on"]') as SVGSVGElement | null;
     const settingsButton = document.querySelector('[data-js="footer__button--settings"]') as HTMLButtonElement | null;
-    let settings: boolean = false;
 
+    let home: boolean = true;
     const homeOn = document.querySelector('[data-js="icon__home--off"]') as SVGSVGElement | null;
     const homeOff = document.querySelector('[data-js="icon__home--on"]') as SVGSVGElement | null;
     const homeButton = document.querySelector('[data-js="footer__button--home"]') as HTMLButtonElement | null;
-    let home: boolean = true;
 
+    let light: boolean = false;
     const lightOn = document.querySelector('[data-js="icon__light--off"]') as SVGSVGElement | null;
     const lightOff = document.querySelector('[data-js="icon__light--on"]') as SVGSVGElement | null;
     const lightButton = document.querySelector('[data-js="footer__button--light"]') as HTMLButtonElement | null;
-    let light: boolean = false;
     
 
 
@@ -78,3 +78,4 @@
     } else {
         console.error("Eines oder mehrere erforderliche Elemente fehlen im DOM.");
     }
+
