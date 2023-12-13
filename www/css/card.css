@@ -14,7 +14,9 @@ card.css
 
     .card {
         position: absolute;
-        display: flex;        
+        display: flex;     
+        flex-direction: column;
+        align-items: center;   
     
         background-color: var(--color-card-background);
         width: 80vw;
@@ -22,14 +24,7 @@ card.css
         border-radius: 10px;
         box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.25);
         
-    }
-
-    .card__home {
-       background-color: transparent;
-        
-    }
- 
-    
+    } 
 }
 
 /* Ende @media */
