@@ -49,38 +49,13 @@ basics.css
     ol,
     blockquote {
         margin-top: 0px;
-        margin-bottom: 1em;
+        margin-bottom: 5px;
     }
 
    
     .visually-hidden {
         visibility: hidden;
         display: none;
-    }
-
-    /*+
-      +Umgebene Elemente sollen gefloatete Elemente umschließen
-      */
-
-    .clear-overflow {
-        overflow: hidden;
-    }
-
-    .clearfix::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-
-    .clear-flow-root {
-        display: flow-root;
-    }
-
-    /* 
-     * Element soll unterhalb von gefloateten Elementen bleiben
-     */
-    .clear-both {
-        clear: both;
     }
 
 
@@ -117,19 +92,6 @@ basics.css
     }
 
     /* h5 und h6 bei Bedarf nachtragen */
-
-    /* Grundlegende Gestaltung Kontaktdaten und Kontaktformular */
-    address {
-        font-style: normal;
-    }
-
-    label {
-        display: block;
-    }
-
-    form div {
-        margin-top: 1em;
-    }
 
 
 }
