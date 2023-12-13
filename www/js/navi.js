@@ -14,91 +14,71 @@ const lightOn = document.querySelector('[data-js="icon__light--off"]');
 const lightOff = document.querySelector('[data-js="icon__light--on"]');
 const lightButton = document.querySelector('[data-js="footer__button--light"]');
 const lightCard = document.querySelector('[data-js="card__light"]');
-const updateVisibility = () => {
-    setTimeout(() => {
-        console.log('updateVisibility');
-        if (settingsCardTemp) {
-            if (settings) {
-                settingsCardTemp.classList.remove('visually-hidden');
-            }
-            if (!settings) {
-                settingsCardTemp.classList.add('visually-hidden');
-            }
-        }
-        if (homeCard) {
-            if (home) {
-                homeCard.classList.remove('visually-hidden');
-            }
-            if (!home) {
-                homeCard.classList.add('visually-hidden');
-            }
-        }
-        if (lightCard) {
-            if (light) {
-                lightCard.classList.remove('visually-hidden');
-            }
-            if (!light) {
-                lightCard.classList.add('visually-hidden');
-            }
-        }
-    }, 500);
+/**
+* Aktualisiert die Sichtbarkeit der Karten (Einstellungen, Home, Licht).
+* Verwendet die Zustände der 'settings', 'home' und 'light' Variablen.
+* Die 'visually-hidden' Klasse wird basierend auf diesen Zuständen hinzugefügt oder entfernt.
+    * `settingsCardTemp?.classList.toggle('visually-hidden', !settings);`
+    * Diese Zeile überprüft den Zustand von 'settings'. Wenn 'settings' 'true' ist, wird die Klasse 'visually-hidden' von der 'settingsCardTemp' entfernt.
+    * Ist 'settings' 'false', wird die Klasse hinzugefügt.
+* Der optionale Chaining-Operator `?.` wird verwendet, um sicherzustellen, dass kein Fehler auftritt, falls eines der Elemente im DOM nicht vorhanden ist.
+*/
+const updateCardVisibility = () => {
+    settingsCardTemp === null || settingsCardTemp === void 0 ? void 0 : settingsCardTemp.classList.toggle('visually-hidden', !settings);
+    homeCard === null || homeCard === void 0 ? void 0 : homeCard.classList.toggle('visually-hidden', !home);
+    lightCard === null || lightCard === void 0 ? void 0 : lightCard.classList.toggle('visually-hidden', !light);
 };
-if (settingsOff && settingsOn && settingsButton && homeOff && homeOn && homeButton && lightOff && lightOn && lightButton && settingsCardTemp && homeCard && lightCard) {
-    settingsButton.addEventListener("click", () => {
-        updateVisibility();
-        if (!settings) {
-            settings = !settings;
-            settingsOff.classList.toggle('visually-hidden');
-            settingsOn.classList.toggle('visually-hidden');
-        }
-        if (home) {
-            home = !home;
-            homeOff.classList.toggle('visually-hidden');
-            homeOn.classList.toggle('visually-hidden');
-        }
-        if (light) {
-            light = !light;
-            lightOff.classList.toggle('visually-hidden');
-            lightOn.classList.toggle('visually-hidden');
-        }
-    });
-    homeButton.addEventListener("click", () => {
-        updateVisibility();
-        if (settings) {
-            settings = !settings;
-            settingsOff.classList.toggle('visually-hidden');
-            settingsOn.classList.toggle('visually-hidden');
-        }
-        if (!home) {
-            home = !home;
-            homeOff.classList.toggle('visually-hidden');
-            homeOn.classList.toggle('visually-hidden');
-        }
-        if (light) {
-            light = !light;
-            lightOff.classList.toggle('visually-hidden');
-            lightOn.classList.toggle('visually-hidden');
-        }
-    });
-    lightButton.addEventListener("click", () => {
-        updateVisibility();
-        if (settings) {
-            settings = !settings;
-            settingsOff.classList.toggle('visually-hidden');
-            settingsOn.classList.toggle('visually-hidden');
-        }
-        if (home) {
-            home = !home;
-            homeOff.classList.toggle('visually-hidden');
-            homeOn.classList.toggle('visually-hidden');
-        }
-        if (!light) {
-            light = !light;
-            lightOff.classList.toggle('visually-hidden');
-            lightOn.classList.toggle('visually-hidden');
-        }
-    });
-}
-else {
-    console.error("Eines oder mehrere erforderliche Elemente fehlen im DOM.");
-}
+settingsButton === null || settingsButton === void 0 ? void 0 : settingsButton.addEventListener("click", () => {
+    if (!settings) {
+        settings = !settings;
+        settingsOff === null || settingsOff === void 0 ? void 0 : settingsOff.classList.toggle('visually-hidden');
+        settingsOn === null || settingsOn === void 0 ? void 0 : settingsOn.classList.toggle('visually-hidden');
+    }
+    if (home) {
+        home = !home;
+        homeOff === null || homeOff === void 0 ? void 0 : homeOff.classList.toggle('visually-hidden');
+        homeOn === null || homeOn === void 0 ? void 0 : homeOn.classList.toggle('visually-hidden');
+    }
+    if (light) {
+        light = !light;
+        lightOff === null || lightOff === void 0 ? void 0 : lightOff.classList.toggle('visually-hidden');
+        lightOn === null || lightOn === void 0 ? void 0 : lightOn.classList.toggle('visually-hidden');
+    }
+    updateCardVisibility();
+});
+homeButton === null || homeButton === void 0 ? void 0 : homeButton.addEventListener("click", () => {
+    if (settings) {
+        settings = !settings;
+        settingsOff === null || settingsOff === void 0 ? void 0 : settingsOff.classList.toggle('visually-hidden');
+        settingsOn === null || settingsOn === void 0 ? void 0 : settingsOn.classList.toggle('visually-hidden');
+    }
+    if (!home) {
+        home = !home;
+        homeOff === null || homeOff === void 0 ? void 0 : homeOff.classList.toggle('visually-hidden');
+        homeOn === null || homeOn === void 0 ? void 0 : homeOn.classList.toggle('visually-hidden');
+    }
+    if (light) {
+        light = !light;
+        lightOff === null || lightOff === void 0 ? void 0 : lightOff.classList.toggle('visually-hidden');
+        lightOn === null || lightOn === void 0 ? void 0 : lightOn.classList.toggle('visually-hidden');
+    }
+    updateCardVisibility();
+});
+lightButton === null || lightButton === void 0 ? void 0 : lightButton.addEventListener("click", () => {
+    if (settings) {
+        settings = !settings;
+        settingsOff === null || settingsOff === void 0 ? void 0 : settingsOff.classList.toggle('visually-hidden');
+        settingsOn === null || settingsOn === void 0 ? void 0 : settingsOn.classList.toggle('visually-hidden');
+    }
+    if (home) {
+        home = !home;
+        homeOff === null || homeOff === void 0 ? void 0 : homeOff.classList.toggle('visually-hidden');
+        homeOn === null || homeOn === void 0 ? void 0 : homeOn.classList.toggle('visually-hidden');
+    }
+    if (!light) {
+        light = !light;
+        lightOff === null || lightOff === void 0 ? void 0 : lightOff.classList.toggle('visually-hidden');
+        lightOn === null || lightOn === void 0 ? void 0 : lightOn.classList.toggle('visually-hidden');
+    }
+    updateCardVisibility();
+});
