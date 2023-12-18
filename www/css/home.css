@@ -41,10 +41,38 @@ home.css
         display: flex;
         align-items: center;
         margin-top: auto;
-        font-size: 1.5rem;
-        font-weight: 600;
+        font-size: 2rem;
+        font-weight: 300;
         flex-direction: column;
         color: var(--color-text-light);
+    }
+
+    .home-card__monitoring--area {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      
+    }
+
+    .home-card__monitoring--text {
+      margin: 0;
+    }
+
+    .home-card__monitoring--messure {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .home-card__monitoring--status {
+      display: flex;
+      gap: 2.5rem;
+      margin: 1.3rem;
+      
+    }
+
+    .home-card__monitoring--status-icon {
+      width: 100%;
     }
     
 }
