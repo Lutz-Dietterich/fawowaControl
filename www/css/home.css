@@ -14,6 +14,7 @@ home.css
 
     .home-card{
         background-color: transparent; 
+        box-shadow: none;
      }
     
      .home-card__header {
