@@ -54,14 +54,44 @@
                     </div>
                 </section>
             </section>
-
         </article>
+
         <article class="card visually-hidden" data-js="card__settings--hum">
 
         </article>
-        <article class="card visually-hidden" data-js="card__settings--temp">
 
+        <article class="card visually-hidden" data-js="card__settings--temp">
+            <h1>Temperatur</h1>
+            <svg class="settings-card__gauge">
+                <circle cx="100" cy="100" r="120" fill="none" stroke="rgba(11, 12, 13, 1)" stroke-width="12" stroke-dasharray="725" stroke-dashoffset="170" stroke-linecap="round"></circle>
+                <defs>
+                    <lineargradient id="gradient" x1="50%" y1="50%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(91, 222, 70, 1)" />
+                        <stop offset="100%" stop-color="rgba(255, 255, 255, 1)" />
+                    </lineargradient>
+                    <filter id="glow">
+                        <fegaussianblur in="SourceGraphic" stdDeviation="15" result="blur" />
+                        <feflood flood-color="rgba(0, 0, 255, 0.4)" result="color"/>
+                        <fecomposite in="color" in2="blur" operator="in" result="glow"/>
+                        <femerge>
+                            <femergenode in="glow" />
+                            <femergenode in="SourceGraphic" />
+                        </femerge>
+                    </filter>
+                </defs>
+                <circle id="circle" cx="100" cy="100" r="120" fill="none" stroke="url(#gradient)" filter="url(#glow)" stroke-width="12" stroke-dasharray="725" stroke-dashoffset="170" stroke-linecap="round"></circle>
+            </svg>
+            <div class="settings-card__gauge--value-box">
+                <input class="settings-card__gauge--current-value" type="number" value="5" id="num" data-js="settings-card__gauge--current-value">
+                <span>°C</span>
+            </div>
+    
+            <div style="margin: 20px; z-index: 5;">
+                <button id="minus" style="margin: 0 20px 0 20px;">-1</button>
+                <button id="plus" >+1</button>
+            </div>
         </article>
+
         <article class="card visually-hidden" data-js="card__light">
 
         </article>
@@ -97,4 +127,36 @@
 
     </div>
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        let num = document.getElementById("num");
+        let minus = document.getElementById("minus");
+        let plus = document.getElementById("plus");
+        let circle = document.getElementById("circle");
+
+
+        function updateGauge(currentValue) {
+        let newOffset = 725 - (currentValue / 35) * (725 - 170);
+        circle.setAttribute("stroke-dashoffset", newOffset.toString());
+        }
+
+
+        minus.addEventListener("click", () => {
+            let currentValue = parseInt(num.value, 10);
+            if (currentValue > 0) {
+                num.value = currentValue - 1;
+                updateGauge(currentValue - 1);
+            }
+        });
+
+        plus.addEventListener("click", () => {
+            let currentValue = parseInt(num.value, 10);
+            if (currentValue < 35) {
+                num.value = currentValue + 1;
+                updateGauge(currentValue + 1);
+            }
+        });
+    });
+</script>
 </html> 

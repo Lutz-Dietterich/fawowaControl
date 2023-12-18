@@ -1,0 +1,61 @@
+
+/* ===============================
+
+settings.css
+
+- gestaltung der Settings Karten
+
+
+================================*/
+
+
+
+@media screen {
+
+   .settings-card__gauge {
+        width: 200px;
+        height: 200px;
+        margin-top: 2rem;
+        overflow: visible; 
+        transform: rotate(140deg); 
+        z-index: 2;
+   }
+
+   .settings-card__gauge--value-box {
+    display: flex;
+    font-size: 24px;
+    margin-top: -150px;
+   }
+    
+   }
+
+   .settings-card__gauge--current-value {
+    background-color: transparent;
+    width: 70px;
+    font-size: 3rem;
+    color: var(--color-text-light);
+    text-align: right;
+    border: none;
+    
+    
+}
+
+/* Ende @media */
+
+
+
+@media screen and (min-width: 1080px) {
+
+ 
+
+}
+
+/* Ende der Media Query */
+
+
+@media screen and (min-width: 800px) {
+
+    
+}
+
+/* Ende der Media Query */
