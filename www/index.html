@@ -82,7 +82,7 @@
                 <circle id="circle" cx="100" cy="100" r="120" fill="none" stroke="url(#gradient)" filter="url(#glow)" stroke-width="12" stroke-dasharray="725" stroke-dashoffset="170" stroke-linecap="round"></circle>
             </svg>
             <div class="settings-card__gauge--value-box">
-                <input class="settings-card__gauge--current-value" type="number" value="5" id="num" data-js="settings-card__gauge--current-value">
+                <input class="settings-card__gauge--current-value" type="number" value="21" id="num" data-js="settings-card__gauge--current-value">
                 <span>°C</span>
             </div>
     
@@ -133,7 +133,10 @@
         let num = document.getElementById("num");
         let minus = document.getElementById("minus");
         let plus = document.getElementById("plus");
-        let circle = document.getElementById("circle");
+        let startValue = 725 - (parseInt(num.value, 10) / 35) * (725 - 170);
+
+        updateGauge(startValue);
+        console.log(startValue);
 
 
         function updateGauge(currentValue) {
