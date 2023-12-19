@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="/www/css/style.css">
     <script src="/www/js/navi.js" defer></script>
+    <script src="/www/js/gauge.js" defer></script>
 
 </head>
 <body>
@@ -79,16 +80,16 @@
                         </femerge>
                     </filter>
                 </defs>
-                <circle id="circle" cx="100" cy="100" r="120" fill="none" stroke="url(#gradient)" filter="url(#glow)" stroke-width="12" stroke-dasharray="725" stroke-dashoffset="170" stroke-linecap="round"></circle>
+                <circle data-js="settings-card__gauge--scale" id="circle" cx="100" cy="100" r="120" fill="none" stroke="url(#gradient)" filter="url(#glow)" stroke-width="12" stroke-dasharray="725" stroke-dashoffset="170" stroke-linecap="round"></circle>
             </svg>
             <div class="settings-card__gauge--value-box">
-                <input class="settings-card__gauge--current-value" type="number" value="21" id="num" data-js="settings-card__gauge--current-value">
+                <input class="settings-card__gauge--current-value" data-js="settings-card__gauge--current-value" type="number" value="21">
                 <span>°C</span>
             </div>
     
             <div style="margin: 20px; z-index: 5;">
-                <button id="minus" style="margin: 0 20px 0 20px;">-1</button>
-                <button id="plus" >+1</button>
+                <button data-js="settings-card__button-round--minus"  style="margin: 0 20px 0 20px;">-1</button>
+                <button data-js="settings-card__button-round--plus" >+1</button>
             </div>
         </article>
 
@@ -127,39 +128,4 @@
 
     </div>
 </body>
-
-<script>
-        let num = document.getElementById("num");
-        let minus = document.getElementById("minus");
-        let plus = document.getElementById("plus");
-        let startValue = 725 - (parseInt(num.value, 10) / 35) * (725 - 170);
-
-        document.addEventListener("DOMContentLoaded", () => {
-            updateGauge(startValue - 5);
-            console.log("startValue :", startValue);
-        });
-
-        function updateGauge(currentValue) {
-            let newOffset = 725 - (currentValue / 35) * (725 - 170);
-            circle.setAttribute("stroke-dashoffset", newOffset.toString());
-            console.log("newOffset :", newOffset);
-        }
-
-        minus.addEventListener("click", () => {
-            let currentValue = parseInt(num.value, 10);
-            if (currentValue > 0) {
-                num.value = currentValue - 1;
-                updateGauge(currentValue - 1);
-            }
-        });
-
-        plus.addEventListener("click", () => {
-            let currentValue = parseInt(num.value, 10);
-            if (currentValue < 35) {
-                num.value = currentValue + 1;
-                updateGauge(currentValue + 1);
-            }
-        });
-   
-</script>
 </html> 
