@@ -70,8 +70,8 @@
                         <stop offset="100%" stop-color="rgba(255, 255, 255, 1)" />
                     </lineargradient>
                     <filter id="glow">
-                        <fegaussianblur in="SourceGraphic" stdDeviation="15" result="blur" />
-                        <feflood flood-color="rgba(0, 0, 255, 0.4)" result="color"/>
+                        <fegaussianblur in="SourceGraphic" stdDeviation="12.5" result="blur" />
+                        <feflood flood-color="rgba(10, 137, 218, 1)" result="color"/>
                         <fecomposite in="color" in2="blur" operator="in" result="glow"/>
                         <femerge>
                             <femergenode in="glow" />
@@ -129,21 +129,21 @@
 </body>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
         let num = document.getElementById("num");
         let minus = document.getElementById("minus");
         let plus = document.getElementById("plus");
         let startValue = 725 - (parseInt(num.value, 10) / 35) * (725 - 170);
 
-        updateGauge(startValue);
-        console.log(startValue);
-
+        document.addEventListener("DOMContentLoaded", () => {
+            updateGauge(startValue - 5);
+            console.log("startValue :", startValue);
+        });
 
         function updateGauge(currentValue) {
-        let newOffset = 725 - (currentValue / 35) * (725 - 170);
-        circle.setAttribute("stroke-dashoffset", newOffset.toString());
+            let newOffset = 725 - (currentValue / 35) * (725 - 170);
+            circle.setAttribute("stroke-dashoffset", newOffset.toString());
+            console.log("newOffset :", newOffset);
         }
-
 
         minus.addEventListener("click", () => {
             let currentValue = parseInt(num.value, 10);
@@ -160,6 +160,6 @@
                 updateGauge(currentValue + 1);
             }
         });
-    });
+   
 </script>
 </html> 
