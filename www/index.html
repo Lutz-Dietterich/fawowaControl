@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="/www/css/style.css">
     <script src="/www/js/navi.js" defer></script>
-    <script src="/www/js/gauge.js" defer></script>
+    <script src="/www/js/setpoint.js" defer></script>
 
 
 </head>
@@ -63,7 +63,7 @@
 
             <article class="card visually-hidden" data-js="card__settings--temp">
                 <h1>Temperatur</h1>
-                <svg class="settings-card__gauge">
+                <svg class="settings-card__setpoint--display">
                     <circle cx="100" cy="100" r="120" fill="none" stroke="rgba(11, 12, 13, 1)" stroke-width="12" stroke-dasharray="725" stroke-dashoffset="170" stroke-linecap="round"></circle>
                     <defs>
                         <lineargradient id="gradient" x1="50%" y1="50%" x2="100%" y2="100%">
@@ -80,24 +80,56 @@
                             </femerge>
                         </filter>
                     </defs>
-                    <circle data-js="settings-card__gauge--scale" id="circle" cx="100" cy="100" r="120" fill="none" stroke="url(#gradient)" filter="url(#glow)" stroke-width="12" stroke-dasharray="725" stroke-dashoffset="170" stroke-linecap="round"></circle>
+                    <circle data-js="settings-card__setpoint--scale" id="circle" cx="100" cy="100" r="120" fill="none" stroke="url(#gradient)" filter="url(#glow)" stroke-width="12" stroke-dasharray="725" stroke-dashoffset="170" stroke-linecap="round"></circle>
                 </svg>
-                <div class="settings-card__gauge--range">
-                    <span>16°C</span>
-                    <span>30°C</span>
+                <div class="settings-card__setpoint--range">
+                    
+                    
                 </div>
-                <div class="settings-card__gauge--value-box">
-                    <input class="settings-card__gauge--current-value" data-js="settings-card__gauge--current-value" type="number" value="21">
+                <div class="settings-card__setpoint--value-box">
+                    <input class="settings-card__setpoint--current-value" data-js="settings-card__setpoint--current-value" type="number" value="21">
                     <span>°C</span>
                 </div>
                 <div class="settings-card__automatic">
                     <button class="button__clean"><img src="./assets/icons/iconAutoON.svg" alt=""></button>
                     <button class="button__round"><img src="./assets/icons/icon-OnOff.svg" alt=""></button>
                 </div>
-                <div class="settings-card__gauge--buttons">
-                    <button class="button__round" data-js="settings-card__button-round--minus">-</button>
-                    <button class="button__round" data-js="settings-card__button-round--plus">+</button>
-                </div>
+                <section class="settings-card__setpoint--buttons">
+                    <div class="button__setpoint">
+                        <span>16°C</span>
+                        <button class="button__round" data-js="settings-card__button-round--minus">-</button>    
+                    </div>
+                    <div class="button__setpoint">
+                        <span>30°C</span>
+                        <button class="button__round" data-js="settings-card__button-round--plus">+</button>    
+                    </div>
+                </section>
+                <section class="setting-card__switch-area">
+                    <div>
+                        <button class="button__clean">
+                            <img class="visually-hidden" src="./assets/icons/iconTemp.svg" alt="">
+                            <img src="./assets/icons/iconTempOn.svg" alt="">
+                        </button>
+                        <button class="button__clean">
+                            <img src="./assets/icons/iconHum.svg" alt="">
+                            <img class="visually-hidden" src="./assets/icons/iconHumOn.svg" alt="">
+                        </button>
+                    </div>
+                    <div>
+                        <button class="button__clean">
+                            <img src="./assets/icons/iconFan1.svg" alt="">
+                            <img class="visually-hidden" src="./assets/icons/iconFan1On.svg" alt="">
+                        </button>
+                        <button class="button__clean">
+                            <img src="./assets/icons/iconFan2.svg" alt="">
+                            <img class="visually-hidden" src="./assets/icons/iconFan2On.svg" alt="">
+                        </button>
+                        <button class="button__clean">
+                            <img src="./assets/icons/iconFan3.svg" alt="">
+                            <img class="visually-hidden" src="./assets/icons/iconFan3On.svg" alt="">
+                        </button>
+                    </div>
+                </section>
             </article>
 
             <article class="card visually-hidden" data-js="card__light">
