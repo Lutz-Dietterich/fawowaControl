@@ -1,16 +1,11 @@
 
-/* ===============================
-
-settings.css
-
-- gestaltung der Settings Karten
-
-
-================================*/
-
-
-
 @media screen {
+
+     .settings-card__title {
+          font-size: 1.8rem;
+          font-weight: 400;
+          margin-top: 10%; 
+      }
 
      .settings-card__setpoint--display {
           width: 200px;
@@ -60,14 +55,11 @@ settings.css
           justify-self: flex-end;
           width: 250px;
           margin-top: auto;
-          margin-bottom: 10%;
+          margin-bottom: 5%;
           z-index: 5;          
      }
 
 }
-/* Ende @media */
-
-
 
 @media screen and (min-width: 1080px) {
 
@@ -75,12 +67,8 @@ settings.css
 
 }
 
-/* Ende der Media Query */
-
-
 @media screen and (min-width: 800px) {
 
     
 }
 
-/* Ende der Media Query */
