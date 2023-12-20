@@ -12,6 +12,7 @@
     <script src="/www/js/navi.js" defer></script>
     <script src="/www/js/gauge.js" defer></script>
 
+
 </head>
 <body>
     <div class="container">
@@ -82,18 +83,26 @@
                 </defs>
                 <circle data-js="settings-card__gauge--scale" id="circle" cx="100" cy="100" r="120" fill="none" stroke="url(#gradient)" filter="url(#glow)" stroke-width="12" stroke-dasharray="725" stroke-dashoffset="170" stroke-linecap="round"></circle>
             </svg>
+            <div class="settings-card__gauge--range">
+                <span>16°C</span>
+                <span>30°C</span>
+            </div>
             <div class="settings-card__gauge--value-box">
                 <input class="settings-card__gauge--current-value" data-js="settings-card__gauge--current-value" type="number" value="21">
                 <span>°C</span>
             </div>
-    
-            <div style="margin: 20px; z-index: 5;">
-                <button data-js="settings-card__button-round--minus"  style="margin: 0 20px 0 20px;">-1</button>
-                <button data-js="settings-card__button-round--plus" >+1</button>
+            <div class="settings-card__automatic">
+                <button class="button__clean"><img src="./assets/icons/icon-automatic.svg" alt=""></button>
+                <button class="button__round"><img src="./assets/icons/icon-OnOff.svg" alt=""></button>
+            </div>
+            <div class="settings-card__gauge--buttons">
+                <button class="button__round" data-js="settings-card__button-round--minus">-</button>
+                <button class="button__round" data-js="settings-card__button-round--plus">+</button>
             </div>
         </article>
 
         <article class="card visually-hidden" data-js="card__light">
+
 
         </article>
         
