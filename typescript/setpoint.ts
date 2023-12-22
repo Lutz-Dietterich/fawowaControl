@@ -8,28 +8,40 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentValue) {
         currentValue.value = tempValue.toString();
         const startValue: number = (parseInt(currentValue.value, 10));
-        updatesetpoint(startValue);
+        updateSetpoint(startValue);
     }
 });
 
-function updatesetpoint(newValue: number) {
-    let newOffset = 725 - (newValue / 35) * (725 - 170);
+const updateScaleValue = (scaleValue: number): void => {
+    let newOffset = 725 - (scaleValue / (tempSettings ? 35 : 60)) * (725 - 170);
     setpointScale?.setAttribute("stroke-dashoffset", newOffset.toString());
+};
+
+const updateSetpoint = (newValue: number): void => {
+    if (tempSettings) {
+        tempValue = newValue;
+    }
+    if (humSettings) {
+        humValue = newValue
+    }
+    updateScaleValue(newValue);
 }
+
+
 if (currentValue) {
     buttonMinus?.addEventListener("click", () => {
         let newValue: number = parseInt(currentValue.value, 10);
         if (newValue > 0) {
             currentValue.value = (newValue - 1).toString();
-            updatesetpoint(newValue - 1);
+            updateSetpoint(newValue - 1);
         }
     });
 
     buttonPlus?.addEventListener("click", () => {
         let newValue = parseInt(currentValue.value, 10);
-        if (newValue < 35) {
+        if (newValue < (tempSettings ? 35 : 60)) {
             currentValue.value = (newValue + 1).toString();
-            updatesetpoint(newValue + 1);
+            updateSetpoint(newValue + 1);
         }
     });
 };

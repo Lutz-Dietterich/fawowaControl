@@ -1,18 +1,22 @@
 "use strict";
 let tempSettings = true;
-let tempValue = 27;
+let tempValue = 21;
 console.log(tempValue);
 const tempSettingsOff = document.querySelector('[data-js="icon__temp--off"]');
 const tempSettingsOn = document.querySelector('[data-js="icon__temp--on"]');
 const tempSettingsButton = document.querySelector('[data-js="setting-card__button-clean--temp"]');
 const tempSettingsCardHeadline = "Temperatur";
+const tempUnit = "°C";
 let humSettings = false;
-let humValue = 60;
+let humValue = 50;
 const humSettingsOff = document.querySelector('[data-js="icon__hum--off"]');
 const humSettingsOn = document.querySelector('[data-js="icon__hum--on"]');
 const humSettingsButton = document.querySelector('[data-js="setting-card__button-clean--hum"]');
 const humSettingsCardHeadline = "Luftfeuchte";
+const humUnit = "%";
 let headline = document.querySelector('[data-js="settings-card__title"]');
+let setpointUnit = document.querySelector('[data-js="settings-card__setpoint--unit]');
+console.log(setpointUnit);
 document.addEventListener('DOMContentLoaded', () => {
     if (headline) {
         if (tempSettings) {
@@ -51,6 +55,7 @@ tempSettingsButton === null || tempSettingsButton === void 0 ? void 0 : tempSett
         humSettingsOn === null || humSettingsOn === void 0 ? void 0 : humSettingsOn.classList.toggle('visually-hidden');
     }
     updateSettingsVisibility();
+    updateScaleValue(tempValue); // This function is declared in setpoint.ts
 });
 humSettingsButton === null || humSettingsButton === void 0 ? void 0 : humSettingsButton.addEventListener('click', () => {
     if (tempSettings) {
@@ -64,4 +69,5 @@ humSettingsButton === null || humSettingsButton === void 0 ? void 0 : humSetting
         humSettingsOn === null || humSettingsOn === void 0 ? void 0 : humSettingsOn.classList.toggle('visually-hidden');
     }
     updateSettingsVisibility();
+    updateScaleValue(humValue); // This function is declared in setpoint.ts
 });

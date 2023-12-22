@@ -1,26 +1,30 @@
 
 let tempSettings: boolean = true;
-let tempValue: number = 27;
+let tempValue: number = 21;
 console.log(tempValue);
 const tempSettingsOff = document.querySelector('[data-js="icon__temp--off"]') as SVGSVGElement | null;
 const tempSettingsOn = document.querySelector('[data-js="icon__temp--on"]') as SVGSVGElement | null;
 const tempSettingsButton = document.querySelector('[data-js="setting-card__button-clean--temp"]') as HTMLButtonElement | null;
 const tempSettingsCardHeadline: string =  "Temperatur";
+const tempUnit: string = "°C";
 
 let humSettings: boolean = false;
-let humValue: number = 60;
+let humValue: number = 50;
 const humSettingsOff = document.querySelector('[data-js="icon__hum--off"]') as SVGSVGElement | null;
 const humSettingsOn = document.querySelector('[data-js="icon__hum--on"]') as SVGSVGElement | null;
 const humSettingsButton = document.querySelector('[data-js="setting-card__button-clean--hum"]') as HTMLButtonElement | null;
 const humSettingsCardHeadline: string =  "Luftfeuchte";
+const humUnit: string = "%";
 
 let headline = document.querySelector('[data-js="settings-card__title"]') as HTMLElement | null;
+let setpointUnit = document.querySelector('[data-js="settings-card__setpoint--unit]') as HTMLElement | null;
 
+console.log(setpointUnit);
 
 document.addEventListener('DOMContentLoaded', () => {
     if (headline) {
         if (tempSettings) {
-        headline.innerText = tempSettingsCardHeadline;
+            headline.innerText = tempSettingsCardHeadline;
         }
         if (humSettings) {
             headline.innerText = humSettingsCardHeadline;
@@ -58,6 +62,7 @@ tempSettingsButton?.addEventListener('click', () => {
         humSettingsOn?.classList.toggle('visually-hidden');
     }
     updateSettingsVisibility();
+    updateScaleValue(tempValue); // This function is declared in setpoint.ts
 });
 
 humSettingsButton?.addEventListener('click', () => {
@@ -72,5 +77,6 @@ humSettingsButton?.addEventListener('click', () => {
         humSettingsOn?.classList.toggle('visually-hidden');
     }
     updateSettingsVisibility();
+    updateScaleValue(humValue); // This function is declared in setpoint.ts
 });
 
