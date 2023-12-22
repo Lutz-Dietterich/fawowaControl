@@ -1,19 +1,19 @@
 
 let settings: boolean = false;
-const settingsOn = document.querySelector('[data-js="icon__settings--off"]') as SVGSVGElement | null;
-const settingsOff = document.querySelector('[data-js="icon__settings--on"]') as SVGSVGElement | null;
+const settingsOff = document.querySelector('[data-js="icon__settings--off"]') as SVGSVGElement | null;
+const settingsOn = document.querySelector('[data-js="icon__settings--on"]') as SVGSVGElement | null;
 const settingsButton = document.querySelector('[data-js="footer__button--settings"]') as HTMLButtonElement | null;
 const settingsCardTemp = document.querySelector('[data-js="card__settings--temp"]') as HTMLElement | null;
 
 let home: boolean = true;
-const homeOn = document.querySelector('[data-js="icon__home--off"]') as SVGSVGElement | null;
-const homeOff = document.querySelector('[data-js="icon__home--on"]') as SVGSVGElement | null;
+const homeOff = document.querySelector('[data-js="icon__home--off"]') as SVGSVGElement | null;
+const homeOn = document.querySelector('[data-js="icon__home--on"]') as SVGSVGElement | null;
 const homeButton = document.querySelector('[data-js="footer__button--home"]') as HTMLButtonElement | null;
 const homeCard = document.querySelector('[data-js="card__home"]') as HTMLElement | null;
 
 let light: boolean = false;
-const lightOn = document.querySelector('[data-js="icon__light--off"]') as SVGSVGElement | null;
-const lightOff = document.querySelector('[data-js="icon__light--on"]') as SVGSVGElement | null;
+const lightOff = document.querySelector('[data-js="icon__light--off"]') as SVGSVGElement | null;
+const lightOn = document.querySelector('[data-js="icon__light--on"]') as SVGSVGElement | null;
 const lightButton = document.querySelector('[data-js="footer__button--light"]') as HTMLButtonElement | null;
 const lightCard = document.querySelector('[data-js="card__light"]') as HTMLElement | null;
 

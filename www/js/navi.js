@@ -1,17 +1,17 @@
 "use strict";
 let settings = false;
-const settingsOn = document.querySelector('[data-js="icon__settings--off"]');
-const settingsOff = document.querySelector('[data-js="icon__settings--on"]');
+const settingsOff = document.querySelector('[data-js="icon__settings--off"]');
+const settingsOn = document.querySelector('[data-js="icon__settings--on"]');
 const settingsButton = document.querySelector('[data-js="footer__button--settings"]');
 const settingsCardTemp = document.querySelector('[data-js="card__settings--temp"]');
 let home = true;
-const homeOn = document.querySelector('[data-js="icon__home--off"]');
-const homeOff = document.querySelector('[data-js="icon__home--on"]');
+const homeOff = document.querySelector('[data-js="icon__home--off"]');
+const homeOn = document.querySelector('[data-js="icon__home--on"]');
 const homeButton = document.querySelector('[data-js="footer__button--home"]');
 const homeCard = document.querySelector('[data-js="card__home"]');
 let light = false;
-const lightOn = document.querySelector('[data-js="icon__light--off"]');
-const lightOff = document.querySelector('[data-js="icon__light--on"]');
+const lightOff = document.querySelector('[data-js="icon__light--off"]');
+const lightOn = document.querySelector('[data-js="icon__light--on"]');
 const lightButton = document.querySelector('[data-js="footer__button--light"]');
 const lightCard = document.querySelector('[data-js="card__light"]');
 /**
