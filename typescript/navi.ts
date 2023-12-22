@@ -3,7 +3,7 @@ let settings: boolean = false;
 const settingsOff = document.querySelector('[data-js="icon__settings--off"]') as SVGSVGElement | null;
 const settingsOn = document.querySelector('[data-js="icon__settings--on"]') as SVGSVGElement | null;
 const settingsButton = document.querySelector('[data-js="footer__button--settings"]') as HTMLButtonElement | null;
-const settingsCardTemp = document.querySelector('[data-js="card__settings--temp"]') as HTMLElement | null;
+const settingsCard = document.querySelector('[data-js="card__settings"]') as HTMLElement | null;
 
 let home: boolean = true;
 const homeOff = document.querySelector('[data-js="icon__home--off"]') as SVGSVGElement | null;
@@ -31,7 +31,7 @@ const lightCard = document.querySelector('[data-js="card__light"]') as HTMLEleme
 
 const updateCardVisibility = (): void => {      
 
-settingsCardTemp?.classList.toggle('visually-hidden', !settings);
+settingsCard?.classList.toggle('visually-hidden', !settings);
 homeCard?.classList.toggle('visually-hidden', !home);
 lightCard?.classList.toggle('visually-hidden', !light);
 };

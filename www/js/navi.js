@@ -3,7 +3,7 @@ let settings = false;
 const settingsOff = document.querySelector('[data-js="icon__settings--off"]');
 const settingsOn = document.querySelector('[data-js="icon__settings--on"]');
 const settingsButton = document.querySelector('[data-js="footer__button--settings"]');
-const settingsCardTemp = document.querySelector('[data-js="card__settings--temp"]');
+const settingsCard = document.querySelector('[data-js="card__settings"]');
 let home = true;
 const homeOff = document.querySelector('[data-js="icon__home--off"]');
 const homeOn = document.querySelector('[data-js="icon__home--on"]');
@@ -24,7 +24,7 @@ const lightCard = document.querySelector('[data-js="card__light"]');
 * Der optionale Chaining-Operator `?.` wird verwendet, um sicherzustellen, dass kein Fehler auftritt, falls eines der Elemente im DOM nicht vorhanden ist.
 */
 const updateCardVisibility = () => {
-    settingsCardTemp === null || settingsCardTemp === void 0 ? void 0 : settingsCardTemp.classList.toggle('visually-hidden', !settings);
+    settingsCard === null || settingsCard === void 0 ? void 0 : settingsCard.classList.toggle('visually-hidden', !settings);
     homeCard === null || homeCard === void 0 ? void 0 : homeCard.classList.toggle('visually-hidden', !home);
     lightCard === null || lightCard === void 0 ? void 0 : lightCard.classList.toggle('visually-hidden', !light);
 };

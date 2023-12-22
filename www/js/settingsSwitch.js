@@ -1,15 +1,15 @@
 "use strict";
 let tempSettings = true;
+let tempValue = 21;
 const tempSettingsOff = document.querySelector('[data-js="icon__temp--off"]');
 const tempSettingsOn = document.querySelector('[data-js="icon__temp--on"]');
 const tempSettingsButton = document.querySelector('[data-js="setting-card__button-clean--temp"]');
-const tempSettingsCard = document.querySelector('[data-js="card__settings--temp"]');
 const tempSettingsCardHeadline = "Temperatur";
 let humSettings = false;
+let humValue = 60;
 const humSettingsOff = document.querySelector('[data-js="icon__hum--off"]');
 const humSettingsOn = document.querySelector('[data-js="icon__hum--on"]');
 const humSettingsButton = document.querySelector('[data-js="setting-card__button-clean--hum"]');
-const humSettingsCard = document.querySelector('[data-js="card__settings--hum"]');
 const humSettingsCardHeadline = "Luftfeuchte";
 let headline = document.querySelector('[data-js="settings-card__title"]');
 document.addEventListener('DOMContentLoaded', () => {
@@ -26,9 +26,15 @@ const updateSettingsVisibility = () => {
     if (headline) {
         if (tempSettings) {
             headline.innerText = tempSettingsCardHeadline;
+            if (currentValue) {
+                currentValue.value = tempValue.toString();
+            }
         }
         if (humSettings) {
             headline.innerText = humSettingsCardHeadline;
+            if (currentValue) {
+                currentValue.value = humValue.toString();
+            }
         }
     }
 };

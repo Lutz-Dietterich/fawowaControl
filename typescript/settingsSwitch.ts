@@ -1,16 +1,16 @@
 
 let tempSettings: boolean = true;
+let tempValue: number = 21;
 const tempSettingsOff = document.querySelector('[data-js="icon__temp--off"]') as SVGSVGElement | null;
 const tempSettingsOn = document.querySelector('[data-js="icon__temp--on"]') as SVGSVGElement | null;
 const tempSettingsButton = document.querySelector('[data-js="setting-card__button-clean--temp"]') as HTMLButtonElement | null;
-const tempSettingsCard = document.querySelector('[data-js="card__settings--temp"]') as HTMLElement | null;
 const tempSettingsCardHeadline: string =  "Temperatur";
 
 let humSettings: boolean = false;
+let humValue: number = 60;
 const humSettingsOff = document.querySelector('[data-js="icon__hum--off"]') as SVGSVGElement | null;
 const humSettingsOn = document.querySelector('[data-js="icon__hum--on"]') as SVGSVGElement | null;
 const humSettingsButton = document.querySelector('[data-js="setting-card__button-clean--hum"]') as HTMLButtonElement | null;
-const humSettingsCard = document.querySelector('[data-js="card__settings--hum"]') as HTMLElement | null;
 const humSettingsCardHeadline: string =  "Luftfeuchte";
 
 let headline = document.querySelector('[data-js="settings-card__title"]') as HTMLElement | null;
@@ -32,9 +32,15 @@ const updateSettingsVisibility = (): void => {
     if (headline) {
         if (tempSettings) {
         headline.innerText = tempSettingsCardHeadline;
+            if (currentValue) {
+                currentValue.value = tempValue.toString();
+            }
         }
         if (humSettings) {
             headline.innerText = humSettingsCardHeadline;
+            if (currentValue) {
+                currentValue.value = humValue.toString();
+            }
         }
     }
 };
