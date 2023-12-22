@@ -1,6 +1,7 @@
 "use strict";
 let tempSettings = true;
-let tempValue = 21;
+let tempValue = 27;
+console.log(tempValue);
 const tempSettingsOff = document.querySelector('[data-js="icon__temp--off"]');
 const tempSettingsOn = document.querySelector('[data-js="icon__temp--on"]');
 const tempSettingsButton = document.querySelector('[data-js="setting-card__button-clean--temp"]');

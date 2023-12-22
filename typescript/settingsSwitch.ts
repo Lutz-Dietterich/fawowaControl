@@ -1,6 +1,7 @@
 
 let tempSettings: boolean = true;
-let tempValue: number = 21;
+let tempValue: number = 27;
+console.log(tempValue);
 const tempSettingsOff = document.querySelector('[data-js="icon__temp--off"]') as SVGSVGElement | null;
 const tempSettingsOn = document.querySelector('[data-js="icon__temp--on"]') as SVGSVGElement | null;
 const tempSettingsButton = document.querySelector('[data-js="setting-card__button-clean--temp"]') as HTMLButtonElement | null;

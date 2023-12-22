@@ -6,8 +6,9 @@ const setpointScale = document.querySelector('[data-js="settings-card__setpoint-
 
 document.addEventListener("DOMContentLoaded", () => {
     if (currentValue) {
-        const startValue: number = 725 - (parseInt(currentValue.value, 10) / 35) * (725 - 170);
-        updatesetpoint(startValue - 5);
+        currentValue.value = tempValue.toString();
+        const startValue: number = (parseInt(currentValue.value, 10));
+        updatesetpoint(startValue);
     }
 });
 

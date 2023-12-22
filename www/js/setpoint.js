@@ -5,11 +5,13 @@ const buttonPlus = document.querySelector('[data-js="settings-card__button-round
 const setpointScale = document.querySelector('[data-js="settings-card__setpoint--scale"]');
 document.addEventListener("DOMContentLoaded", () => {
     if (currentValue) {
-        const startValue = 725 - (parseInt(currentValue.value, 10) / 35) * (725 - 170);
-        updatesetpoint(startValue - 5);
+        currentValue.value = tempValue.toString();
+        const startValue = (parseInt(currentValue.value, 10));
+        updatesetpoint(startValue);
     }
 });
 function updatesetpoint(newValue) {
+    tempValue = newValue;
     let newOffset = 725 - (newValue / 35) * (725 - 170);
     setpointScale === null || setpointScale === void 0 ? void 0 : setpointScale.setAttribute("stroke-dashoffset", newOffset.toString());
 }
