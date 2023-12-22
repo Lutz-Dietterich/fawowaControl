@@ -57,11 +57,11 @@
                 </section>
             </article>
 
-            <article class="card visually-hidden" data-js="card__settings--hum">
+            <article data-js="card__settings--hum" class="card visually-hidden">
 
             </article>
 
-            <article class="card visually-hidden" data-js="card__settings--temp">
+            <article data-js="card__settings--temp" class="card visually-hidden">
                 <h1 class="settings-card__title">Temperatur</h1>
                 <svg class="settings-card__setpoint--display">
                     <circle cx="100" cy="100" r="120" fill="none" stroke="rgba(11, 12, 13, 1)" stroke-width="12" stroke-dasharray="725" stroke-dashoffset="170" stroke-linecap="round"></circle>
@@ -87,7 +87,7 @@
                     
                 </div>
                 <div class="settings-card__setpoint--value-box">
-                    <input class="settings-card__setpoint--current-value" data-js="settings-card__setpoint--current-value" type="number" value="21">
+                    <input data-js="settings-card__setpoint--current-value" class="settings-card__setpoint--current-value" type="number" value="21">
                     <span>°C</span>
                 </div>
                 <div class="settings-card__automatic">
@@ -97,7 +97,7 @@
                 <section class="settings-card__setpoint--buttons">
                     <div class="button__setpoint">
                         <span>16°C</span>
-                        <button class="button__round" data-js="settings-card__button-round--minus">-</button>    
+                        <button data-js="settings-card__button-round--minus" class="button__round">-</button>    
                     </div>
                     <button class="button__clean button__settings-clock">
                         <img class="visually-hidden" src="./assets/icons/iconClock.svg" alt="">
@@ -105,18 +105,18 @@
                     </button>
                     <div class="button__setpoint">
                         <span>30°C</span>
-                        <button class="button__round" data-js="settings-card__button-round--plus">+</button>    
+                        <button data-js="settings-card__button-round--plus" class="button__round">+</button>    
                     </div>
                 </section>
                 <section class="setting-card__switch-area">
                     <div>
-                        <button class="button__clean">
-                            <img class="visually-hidden" src="./assets/icons/iconTemp.svg" alt="">
-                            <img src="./assets/icons/iconTempOn.svg" alt="">
+                        <button data-js="setting-card__button-clean--temp" class="button__clean" >
+                            <img data-js="icon__temp--off" class="visually-hidden" src="./assets/icons/iconTemp.svg" alt="">
+                            <img data-js="icon__temp--on" src="./assets/icons/iconTempOn.svg" alt="">
                         </button>
-                        <button class="button__clean">
-                            <img src="./assets/icons/iconHum.svg" alt="">
-                            <img class="visually-hidden" src="./assets/icons/iconHumOn.svg" alt="">
+                        <button data-js="setting-card__button-clean--hum" class="button__clean">
+                            <img data-js="icon__hum--off" src="./assets/icons/iconHum.svg" alt="">
+                            <img data-js="icon__hum--on" class="visually-hidden" src="./assets/icons/iconHumOn.svg" alt="">
                         </button>
                     </div>
                     <div>
@@ -147,23 +147,23 @@
             <nav class="footer__navbar">
                 <ul class="footer__nav-list">
                     <li class="footer__nav-item">
-                        <button class="footer__nav--button" data-js="footer__button--settings">
-                            <img class="footer__nav-svg" data-js="icon__settings--off" src="./assets/icons/iconSettings.svg" alt="slider hamburger gray">   
-                            <img class="footer__nav-svg visually-hidden" data-js="icon__settings--on" src="./assets/icons/iconSettingsOn.svg" alt="slider hamburger green">   
+                        <button data-js="footer__button--settings" class="footer__nav--button">
+                            <img data-js="icon__settings--off" class="footer__nav-svg" src="./assets/icons/iconSettings.svg" alt="slider hamburger gray">   
+                            <img data-js="icon__settings--on" class="footer__nav-svg visually-hidden" src="./assets/icons/iconSettingsOn.svg" alt="slider hamburger green">   
                         </button>    
                     </li>
 
                     <li class="footer__nav-item">
-                        <button class="footer__nav--button" data-js="footer__button--home">
-                            <img class="footer__nav-svg visually-hidden" data-js="icon__home--off" src="./assets/icons/iconHome.svg" alt="house gray">   
-                            <img class="footer__nav-svg" data-js="icon__home--on" src="./assets/icons/iconHomeOn.svg" alt="house green">   
+                        <button data-js="footer__button--home" class="footer__nav--button">
+                            <img data-js="icon__home--off" class="footer__nav-svg visually-hidden" src="./assets/icons/iconHome.svg" alt="house gray">   
+                            <img data-js="icon__home--on" class="footer__nav-svg" src="./assets/icons/iconHomeOn.svg" alt="house green">   
                         </button>    
                     </li>
 
                     <li class="footer__nav-item">
-                        <button class="footer__nav--button" data-js="footer__button--light">
-                            <img class="footer__nav-svg" data-js="icon__light--off" src="./assets/icons/iconLight.svg" alt="glow bulb gray">   
-                            <img class="footer__nav-svg visually-hidden" data-js="icon__light--on" src="./assets/icons/iconLightOn.svg" alt="glow bulb green">   
+                        <button data-js="footer__button--light" class="footer__nav--button">
+                            <img data-js="icon__light--off" class="footer__nav-svg" src="./assets/icons/iconLight.svg" alt="glow bulb gray">   
+                            <img data-js="icon__light--on" class="footer__nav-svg visually-hidden" src="./assets/icons/iconLightOn.svg" alt="glow bulb green">   
                         </button>      
                     </li>
                 </ul>
