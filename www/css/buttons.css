@@ -41,6 +41,11 @@ buttons.css
         align-items: center;
         gap: 1rem;
     }
+
+    .button__settings-clock {
+        align-self: flex-end;
+    
+    }
     
 }
 
