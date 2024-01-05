@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaWoWa_Control</title>
+    <meta name="description" content="Smart control System for a bisicle camper">
+    <meta name="author" content="Lutz Dietterich">
+
+    <link rel="stylesheet" href="/www/css/style.css">
+    <script src="/www/js/navi.js" defer></script>
+    <script src="/www/js/settingsSwitch.js" defer></script>
+    <script src="/www/js/setpoint.js" defer></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 style="font-size: 16px;">FaWoWa - Control</h1>
+        </header>
+
+        <main class="main">  
+            <article class="card home-card" data-js="card__home">
+                <section class="home-card__header">
+                    <p class="home-card__header--time">9:26</p>
+                    <p class="home-card__header--date">Montag 20. November</p>
+                </section>
+                <section class="home-card__monitoring">
+                    <section class="home-card__monitoring--area">
+                        <p class="home-card__monitoring--text">IN</p>
+                        <div class="home-card__monitoring--messure">
+                            <span>22</span>
+                            <img src="./assets/icons/iconTempLight.svg" alt="C°">
+                        </div>
+                        <div class="home-card__monitoring--messure">
+                            <span>50%</span>
+                            <img src="./assets/icons/iconHumLight.svg" alt="rel">
+                        </div>
+                    </section>
+                    <section class="home-card__monitoring--status">
+                        <img class="home-card__monitoring--status-icon vent-motion" src="./assets/icons/icon-vent-status.svg" alt="Vent Status">
+                        <img class="home-card__monitoring--status-icon" src="./assets/icons/iconAutoON.svg" alt="Automatic Status">
+                        <img class="home-card__monitoring--status-icon" src="./assets/icons/iconClock.svg" alt="TimeProgramm Status">
+                    </section>
+                    <section class="home-card__monitoring--area">
+                        <p class="home-card__monitoring--text">OUT</p>
+                        <div class="home-card__monitoring--messure">
+                            <span>12</span>
+                            <img src="./assets/icons/iconTempLight.svg" alt="C°">
+                        </div>
+                        <div class="home-card__monitoring--messure">
+                            <span>60%</span>
+                            <img src="./assets/icons/iconHumLight.svg" alt="rel">
+                        </div>
+                    </section>
+                </section>
+            </article>
+
+            <article data-js="card__settings" class="card visually-hidden">
+                <h1 data-js="settings-card__title" class="settings-card__title"></h1>
+                <svg class="settings-card__setpoint--display">
+                    <circle cx="100" cy="100" r="120" fill="none" stroke="rgba(11, 12, 13, 1)" stroke-width="12" stroke-dasharray="725" stroke-dashoffset="170" stroke-linecap="round"></circle>
+                    <defs>
+                        <lineargradient id="gradient" x1="50%" y1="50%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="rgba(91, 222, 70, 1)" />
+                            <stop offset="100%" stop-color="rgba(255, 255, 255, 1)" />
+                        </lineargradient>
+                        <filter id="glow">
+                            <fegaussianblur in="SourceGraphic" stdDeviation="12.5" result="blur" />
+                            <feflood flood-color="rgba(10, 137, 218, 1)" result="color"/>
+                            <fecomposite in="color" in2="blur" operator="in" result="glow"/>
+                            <femerge>
+                                <femergenode in="glow" />
+                                <femergenode in="SourceGraphic" />
+                            </femerge>
+                        </filter>
+                    </defs>
+                    <circle data-js="settings-card__setpoint--scale" id="circle" cx="100" cy="100" r="120" fill="none" stroke="url(#gradient)" filter="url(#glow)" stroke-width="12" stroke-dasharray="725" stroke-dashoffset="170" stroke-linecap="round"></circle>
+                </svg>
+                <div class="settings-card__setpoint--value-box">
+                    <input data-js="settings-card__setpoint--current-value" class="settings-card__setpoint--current-value" type="number" value="">
+                    <span data-js="settings-card__setpoint--unit">°C</span>
+                </div>
+                <div class="settings-card__automatic">
+                    <button class="button__clean"><img src="./assets/icons/iconAutoON.svg" alt=""></button>
+                    <button class="button__round"><img src="./assets/icons/icon-OnOff.svg" alt=""></button>
+                </div>
+                <section class="settings-card__setpoint--buttons">
+                    <div class="button__setpoint">
+                        <span>16°C</span>
+                        <button data-js="settings-card__button-round--minus" class="button__round">-</button>    
+                    </div>
+                    <button class="button__clean button__settings-clock">
+                        <img class="visually-hidden" src="./assets/icons/iconClock.svg" alt="">
+                        <img src="./assets/icons/iconClockOn.svg" alt="">
+                    </button>
+                    <div class="button__setpoint">
+                        <span>30°C</span>
+                        <button data-js="settings-card__button-round--plus" class="button__round">+</button>    
+                    </div>
+                </section>
+                <section class="setting-card__switch-area">
+                    <div>
+                        <button data-js="setting-card__button-clean--temp" class="button__clean" >
+                            <img data-js="icon__temp--off" class="visually-hidden" src="./assets/icons/iconTemp.svg" alt="">
+                            <img data-js="icon__temp--on" src="./assets/icons/iconTempOn.svg" alt="">
+                        </button>
+                        <button data-js="setting-card__button-clean--hum" class="button__clean">
+                            <img data-js="icon__hum--off" src="./assets/icons/iconHum.svg" alt="">
+                            <img data-js="icon__hum--on" class="visually-hidden" src="./assets/icons/iconHumOn.svg" alt="">
+                        </button>
+                    </div>
+                    <div>
+                        <button class="button__clean">
+                            <img src="./assets/icons/iconFan1.svg" alt="">
+                            <img class="visually-hidden" src="./assets/icons/iconFan1On.svg" alt="">
+                        </button>
+                        <button class="button__clean">
+                            <img src="./assets/icons/iconFan2.svg" alt="">
+                            <img class="visually-hidden" src="./assets/icons/iconFan2On.svg" alt="">
+                        </button>
+                        <button class="button__clean">
+                            <img src="./assets/icons/iconFan3.svg" alt="">
+                            <img class="visually-hidden" src="./assets/icons/iconFan3On.svg" alt="">
+                        </button>
+                    </div>
+                </section>
+            </article>
+
+            <article class="card visually-hidden" data-js="card__light">
+
+
+            </article>
+            
+        </main>
+        
+        <footer class="footer">
+            <nav class="footer__navbar">
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item">
+                        <button data-js="footer__button--settings" class="footer__nav--button">
+                            <img data-js="icon__settings--off" class="footer__nav-svg" src="./assets/icons/iconSettings.svg" alt="slider hamburger gray">   
+                            <img data-js="icon__settings--on" class="footer__nav-svg visually-hidden" src="./assets/icons/iconSettingsOn.svg" alt="slider hamburger green">   
+                        </button>    
+                    </li>
+
+                    <li class="footer__nav-item">
+                        <button data-js="footer__button--home" class="footer__nav--button">
+                            <img data-js="icon__home--off" class="footer__nav-svg visually-hidden" src="./assets/icons/iconHome.svg" alt="house gray">   
+                            <img data-js="icon__home--on" class="footer__nav-svg" src="./assets/icons/iconHomeOn.svg" alt="house green">   
+                        </button>    
+                    </li>
+
+                    <li class="footer__nav-item">
+                        <button data-js="footer__button--light" class="footer__nav--button">
+                            <img data-js="icon__light--off" class="footer__nav-svg" src="./assets/icons/iconLight.svg" alt="glow bulb gray">   
+                            <img data-js="icon__light--on" class="footer__nav-svg visually-hidden" src="./assets/icons/iconLightOn.svg" alt="glow bulb green">   
+                        </button>      
+                    </li>
+                </ul>
+            </nav>
+        </footer>    
+    </div>
+</body>
+</html> 
