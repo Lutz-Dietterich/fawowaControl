@@ -15,8 +15,9 @@ const humSettingsButton = document.querySelector('[data-js="setting-card__button
 const humSettingsCardHeadline = "Luftfeuchte";
 const humUnit = "%";
 let headline = document.querySelector('[data-js="settings-card__title"]');
-let setpointUnit = document.querySelector('[data-js="settings-card__setpoint--unit]');
+let setpointUnit = document.querySelector('[data-js="settings-card__setpoint--unit"]');
 console.log(setpointUnit);
+console.log(headline);
 document.addEventListener('DOMContentLoaded', () => {
     if (headline) {
         if (tempSettings) {
@@ -28,15 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 const updateSettingsVisibility = () => {
-    if (headline) {
+    if (headline && setpointUnit) {
         if (tempSettings) {
             headline.innerText = tempSettingsCardHeadline;
+            setpointUnit.innerText = tempUnit;
             if (currentValue) {
                 currentValue.value = tempValue.toString();
             }
         }
         if (humSettings) {
             headline.innerText = humSettingsCardHeadline;
+            setpointUnit.innerText = humUnit;
             if (currentValue) {
                 currentValue.value = humValue.toString();
             }

@@ -59,6 +59,27 @@
         margin: 1.3rem;
     }
 
+    .vent-motion {
+        pointer-events: none;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .vent-motion {
+          animation: vent-motion-spin infinite 17s linear;
+        }
+      }
+
+
+      @keyframes vent-motion-spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      
+
     .home-card__monitoring--status-icon {
         width: 100%;
     }
