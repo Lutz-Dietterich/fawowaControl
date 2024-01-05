@@ -1,0 +1,55 @@
+/* =========================================================================
+
+navi.css
+
+Main Navigation 
+
+========================================================================*/
+
+
+@media screen {
+
+  .footer__navbar {
+    width: 90%;
+  }
+
+  .footer__nav-list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer__nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .footer__nav-item:first-child {
+    justify-content: flex-start;
+}
+
+  .footer__nav-item:last-child {
+      justify-content: flex-end;
+  }
+
+  .footer__nav--button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .footer__nav-svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+}
+
+  /* Ende @media */

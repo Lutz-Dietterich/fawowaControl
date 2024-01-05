@@ -1,0 +1,72 @@
+
+/* ===============================
+
+buttons.css
+
+- gestaltung aller Buttons
+
+
+================================*/
+
+
+
+@media screen {
+
+    .button__clean {
+        background: transparent;
+        border: none;
+    }
+
+    .button__round {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--color-button);
+        width: 3rem;
+        height: 3rem;
+        border: none;
+        border-radius: 50%;
+        z-index: 5;
+        font-size: 1.8rem;
+        color: var(--color-text-light);
+    }
+
+    .button__round:active {
+        scale: 0.9;
+    }
+
+    .button__setpoint {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .button__settings-clock {
+        align-self: flex-end;
+    
+    }
+    
+}
+
+  
+ 
+ /* Ende @media */
+ 
+ 
+ 
+ @media screen and (min-width: 1080px) {
+ 
+  
+ 
+ }
+ 
+ /* Ende der Media Query */
+ 
+ 
+ @media screen and (min-width: 800px) {
+ 
+     
+ }
+ 
+ /* Ende der Media Query */

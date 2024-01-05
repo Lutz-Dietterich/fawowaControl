@@ -1,0 +1,45 @@
+/* ===============================
+
+content.css
+
+- Links in main
+- Alle Elemente in main
+
+================================*/
+
+
+
+@media screen {
+
+
+ .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 15%;
+ 
+    
+}
+
+}
+
+/* Ende @media */
+
+
+
+@media screen and (min-width: 1080px) {
+
+ 
+
+}
+
+/* Ende der Media Query */
+
+
+@media screen and (min-width: 800px) {
+
+    
+}
+
+/* Ende der Media Query */

@@ -1,7 +1,7 @@
-
 import network
 import socket
-import machine 
+import machine
+import os 
 import config
 from modules import fan_control
 
@@ -27,19 +27,21 @@ def read_file(name):
         elif name.endswith(".css"):
             content_type = "text/css"
             mode = 'r'
-        elif name.endswith(".jpg") or name.endswith(".jpeg"):
-            content_type = "image/jpeg"
-            mode = 'rb'
-        elif name.endswith(".png"):
-            content_type = "image/png"
-            mode = 'rb'
+        elif name.endswith(".js"):
+            content_type = "application/javascript"
+            mode = 'r'
+        elif name.endswith(".svg"):
+            content_type = "image/svg+xml"
+            mode = 'r'
         else:
             content_type = "text/plain"
             mode = 'r'
 
+
         with open(name, mode) as file:
             return True, content_type, file.read()
-    except:
+    except Exception as e:
+        print(f"Fehler beim Lesen der Datei: {name}, Fehler: {e}")
         return False, "text/plain", "404 Not Found"
 
 # Funktion zur Steuerung der LED
@@ -85,7 +87,9 @@ def start_server(pin):
                 else:
                     if filename == "/":
                         filename = "/index.html"
-                    found, content_type, response = read_file('www' + filename)
+                        
+                    found, content_type, response = read_file('www' + filename)    
+
                     if found:
                         send_http_response(cl, 200, content_type, response)
                     else:
