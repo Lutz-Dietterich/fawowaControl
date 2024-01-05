@@ -1,0 +1,61 @@
+/* =================================
+
+layout.css
+
+- Gestaltung der Layoutbereiche
+- Hauptnavigation in eigenem Stylesheet
+- Elemente im Inhaltsbereich in content.css
+
+================================== */
+
+@media screen {
+    html, body {
+        height: 100%;
+        overflow-x: hidden;
+        margin: 0;
+    }
+   
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: var(--color-background);
+        background-image: url(https://res.cloudinary.com/dnojoo4vt/image/upload/v1702228821/jay-mantri-TFyi0QOx08c-unsplash_1_mmgnu6.jpg);
+        background-position: bottom 15% center;
+        /* background-size: cover; */
+
+    }
+
+    .main {
+        flex: 1;
+        line-height: 1.5;
+    }
+  
+  
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        background-color: var(--color-footer);
+        opacity: 0.7;
+        /* min-height: 10vh; */
+        width: 100%;
+        margin: 0;
+    }
+
+}
+  
+  /* Ende @media */
+
+  
+  @media screen and (max-height: 1500px) {
+    
+  }
+  
+  @media screen and (min-width: 768px) {
+   
+  }
+  
+  /* Ende der Media Query */
